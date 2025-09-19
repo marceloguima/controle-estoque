@@ -15,13 +15,16 @@
     --alerta: #f01d1dd3;
     --alerta-estoque:#f5d5d5;
         --alerta-sem-estoque:#fc6464;
+        --cor-btn-cancelar:#2f5c8054;
 
 
 }
 
 
 body{
+    width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
 

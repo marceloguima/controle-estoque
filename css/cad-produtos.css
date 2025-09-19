@@ -3,13 +3,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 30px;
     background: var(--cinza-claro);
     box-shadow: var(--sombra);
     border-bottom: solid 1px var(--cor-borda);
     margin-bottom: 40px;
 }
 
+/* campo de busca */
 .form-buscar {
     flex-direction: row;
     width: 500px;
@@ -20,6 +21,13 @@ header {
 
 .form-buscar input {
     width: 400px;
+box-shadow: var(--sombra);
+}
+
+.btn-buscar, .btn-fechar{
+    cursor: pointer;
+    box-shadow: var(--sombra);
+
 }
 
 .btn-buscar {
@@ -34,10 +42,11 @@ header {
 }
 
 main.container {
-    padding: 20px;
+    padding: 40px;
     display: grid;
     grid-template-columns: 20% 80%;
     align-items: start;
+    gap: 20px;
 }
 
 .campo-form-produtos {
@@ -45,16 +54,25 @@ main.container {
  
 }
 
-.campo-produtos-cadastrados {
-   border: 1px solid var(--cor-borda);
-    border-radius: 8px;
-    overflow: hidden; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    grid-column: 2 / -1;
-    position: relative;
+form.form-produto{
+    width: auto;
 }
 
-.produto-tabela {
+textarea{
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+.campo-produtos-cadastrados {
+    width: 100%;
+   border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+  box-shadow: var(--sombra);
+    grid-column: 2 / -1; 
+}
+
+table.produto-tabela {
     width: 100%;
     border-collapse: collapse;
    
@@ -94,43 +112,97 @@ td{
 
 .sem-estoque{
     background: var(--alerta-sem-estoque);
+    font-weight: 600;
+}
+
+.overlay-modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #111111c0;
+}
+
+.overlay-apagar{
+    display: none;
+}
+
+.overlay-editar{
+    /* display: none; */
+}
+
+.modal{
+    border: solid 1px var(--cor-borda);
+    background: var(--cinza-claro);
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
 }
 
 .modal-apagar{
-   width: 300px;
-   height: 100px;
-   border: solid 1px var(--cor-borda);
-   background: var(--cinza-claro);
-   border-radius: 10px;
-   box-shadow: var(--sombra);
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   gap: 20px;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   z-index: 1;
+    width: 360px;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    /* display: none; */
 }
 
-.btn-apaga-produto, .cancela-apagar{
+.modal-apagar p{
+    text-align: center;
+}
+
+.modal-apagar p span{
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* ícone de alerta */
+.fa-triangle-exclamation{
+    color: red;
+    font-size: 2rem;
+}
+
+div.botoes-modal{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* botões de todos os modais */
+.botoes-modal button{
     border: none;
     padding: 12px 0;
     border-radius: 5px;
-    width: 120px;
+    width: 150px;
     cursor: pointer;
+    box-shadow: var(--sombra);
 }
 
 .btn-apaga-produto{
-    background: var(--alerta);
+    background: var(--alerta)!important;
     color: #fff;
     font-weight: 600;
-    margin-right: 5px;
 }
 
-.cancela-apagar{
-    background: var(--azul);
-    color: #fff;
-    margin-left: 5px;
+.btn-cancelar{
+    background: var(--cor-btn-cancelar)!important;
+    color: #111111!important;
+}
+
+.modal-editar{
+    width: 350px;
+    position: absolute;
+    z-index: 3;
 }

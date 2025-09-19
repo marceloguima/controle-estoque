@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" translate="no">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,10 +34,39 @@
             <div class="campo-form-produtos">
                 <form class="cadastro-produto">
                     <h2>Cadastro de produtos</h2>
-                    <input type="text" placeholder="Nome do produto" />
-                    <input type="number" placeholder="Preço" />
-                    <input type="number" placeholder="Informe a quantidade" />
-                    <input type="number" placeholder="Informe o código" />
+                    <div class="campo-entrada">
+                        <label for="nome-cad">Nome</label>
+                        <input
+                            type="text"
+                            placeholder="Nome do produto"
+                            id="nome-cad"
+                        />
+                    </div>
+                    <div class="campo-entrada">
+                        <label for="preco-cad">Preço</label>
+                        <input
+                            type="number"
+                            placeholder="Preço"
+                            id="preco-cad"
+                        />
+                    </div>
+                    <div class="campo-entrada">
+                        <label for="quant-cad">Quantidade</label>
+                        <input
+                            type="number"
+                            placeholder="Informe a quantidade"
+                            id="quant-cad"
+                        />
+                    </div>
+
+                    <div class="campo-entrada">
+                        <label for="cod-cad">código</label>
+                        <input
+                            type="number"
+                            placeholder="Informe o código"
+                            id="cod-cad"
+                        />
+                    </div>
                     <label for="descricao"
                         >Informe a descrição do produto</label
                     >
@@ -45,7 +74,6 @@
                         name="desccricao"
                         id="descricao"
                         rows="5"
-                        cols="39"
                     ></textarea>
 
                     <button class="botao">Cadastrar</button>
@@ -53,11 +81,62 @@
             </div>
             <div class="campo-produtos-cadastrados">
                 <!-- modal prevenção de apagar por acidente -->
-                <div class="modal-apagar">
-                    <p>Quer mesmo apagar esse produto?</p>
-                    <div class="botoes-modal">
-                        <button class="btn-apaga-produto">Sim quero apagar</button>
-                        <button class="cancela-apagar">Cancelar</button>
+                <div class="overlay-modal overlay-apagar">
+                    <div class="modal modal-apagar">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <p>
+                            Quer mesmo apagar <span>camiseta polo</span> do seu
+                            estoque?
+                        </p>
+                        <div class="botoes-modal">
+                            <button class="botao btn-apaga-produto">
+                                Sim quero apagar
+                            </button>
+                            <button class="botao btn-cancelar">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- atualização de produto -->
+                <div class="overlay-modal overlay-editar">
+                    <div class="modal modal-editar">
+                        <form class="form-produto">
+                            <h2>Edite o produto</h2>
+                         <div class="campo-entrada">
+    <label for="nome">Nome</label>
+    <input
+        type="text"
+        value="Camiseta gola polo"
+        id="nome"
+    />
+</div>
+
+<div class="campo-entrada">
+    <label for="preco">Preço</label>
+    <input type="number" value="100" id="preco" />
+</div>
+
+<div class="campo-entrada">
+    <label for="quant">Quantidade</label>
+    <input type="number" value="10" id="quant" />
+</div>
+
+<div class="campo-entrada">
+    <label for="cod">Código</label>
+    <input type="number" value="001" id="cod" />
+</div>
+                            <label for="descricao">Descrição do produto</label>
+                            <textarea name="desccricao" id="descricao" rows="5">
+Camiseta gola polo Cavalera lorem3</textarea
+                            >
+
+                            <div class="botoes-modal">
+                                <button class="botao">Atualizar</button>
+                                <button class="botao btn-cancelar">
+                                    Cancelar
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
