@@ -1,0 +1,136 @@
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: var(--cinza-claro);
+    box-shadow: var(--sombra);
+    border-bottom: solid 1px var(--cor-borda);
+    margin-bottom: 40px;
+}
+
+.form-buscar {
+    flex-direction: row;
+    width: 500px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.form-buscar input {
+    width: 400px;
+}
+
+.btn-buscar {
+    width: 118px !important;
+    padding: 12px 0;
+}
+
+.btn-fechar {
+    width: 110px !important;
+    padding: 12px 0;
+    background: var(--alerta) !important;
+}
+
+main.container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: start;
+}
+
+.campo-form-produtos {
+    height: 100vh;
+ 
+}
+
+.campo-produtos-cadastrados {
+   border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    grid-column: 2 / -1;
+    position: relative;
+}
+
+.produto-tabela {
+    width: 100%;
+    border-collapse: collapse;
+   
+}
+
+
+.produto-tabela th, .produto-tabela td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.produto-tabela th, .produto-tabela td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Linha separadora entre as linhas */
+}
+
+.produto-tabela thead th {
+    font-weight: 600;
+    color: #333;
+}
+
+td{
+    cursor: pointer;
+}
+
+/* Efeito "Zebrado" - cor de fundo para linhas pares */
+.produto-tabela tbody tr:nth-child(even) {
+    background-color: var(--cinza-claro); 
+}
+
+
+.baixo-estoque td{
+    background: var(--alerta-estoque);
+}
+
+.sem-estoque{
+    background: var(--alerta-sem-estoque);
+}
+
+.modal-apagar{
+   width: 300px;
+   height: 100px;
+   border: solid 1px var(--cor-borda);
+   background: var(--cinza-claro);
+   border-radius: 10px;
+   box-shadow: var(--sombra);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: 1;
+}
+
+.btn-apaga-produto, .cancela-apagar{
+    border: none;
+    padding: 12px 0;
+    border-radius: 5px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.btn-apaga-produto{
+    background: var(--alerta);
+    color: #fff;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.cancela-apagar{
+    background: var(--azul);
+    color: #fff;
+    margin-left: 5px;
+}

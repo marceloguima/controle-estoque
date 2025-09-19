@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <link rel="stylesheet" href="../css/cad-produtos.css" />
+        <link rel="stylesheet" href="../css/formularios.css" />
+        <link rel="stylesheet" href="../css/global.css" />
+        <title>Cadastro de Produtos</title>
+    </head>
+    <body>
+        <header>
+            <h1>Controle Fácil</h1>
+            <form class="form-buscar">
+                <input type="text" placeholder="Digite o nome do produto" />
+                <button class="botao btn-buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i> Buscar
+                </button>
+            </form>
+            <button class="botao btn-fechar">
+                <i class="fa-solid fa-xmark"></i> Fechar
+            </button>
+        </header>
+        <main class="container">
+            <div class="campo-form-produtos">
+                <form class="cadastro-produto">
+                    <h2>Cadastro de produtos</h2>
+                    <input type="text" placeholder="Nome do produto" />
+                    <input type="number" placeholder="Preço" />
+                    <input type="number" placeholder="Informe a quantidade" />
+                    <input type="number" placeholder="Informe o código" />
+                    <label for="descricao"
+                        >Informe a descrição do produto</label
+                    >
+                    <textarea
+                        name="desccricao"
+                        id="descricao"
+                        rows="5"
+                        cols="39"
+                    ></textarea>
+
+                    <button class="botao">Cadastrar</button>
+                </form>
+            </div>
+            <div class="campo-produtos-cadastrados">
+                <!-- modal prevenção de apagar por acidente -->
+                <div class="modal-apagar">
+                    <p>Quer mesmo apagar esse produto?</p>
+                    <div class="botoes-modal">
+                        <button class="btn-apaga-produto">Sim quero apagar</button>
+                        <button class="cancela-apagar">Cancelar</button>
+                    </div>
+                </div>
+
+                <table class="produto-tabela">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Preço</th>
+                            <th>Quant.</th>
+                            <th>Cod.</th>
+                            <th>Editar</th>
+                            <th>Apagar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="produto-corpo-tabela">
+                        <tr>
+                            <td>Camiseta polo</td>
+                            <td>R$ 69,90</td>
+                            <td>10</td>
+                            <td>0001</td>
+                            <td><i class="fa-solid fa-pencil"></i></td>
+                            <td><i class="fa-solid fa-trash"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Camiseta</td>
+                            <td>R$ 69,90</td>
+                            <td>10</td>
+                            <td>0002</td>
+                            <td><i class="fa-solid fa-pencil"></i></td>
+                            <td><i class="fa-solid fa-trash"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Camiseta</td>
+                            <td>R$ 69,90</td>
+                            <td>10</td>
+                            <td>0003</td>
+                            <td><i class="fa-solid fa-pencil"></i></td>
+                            <td><i class="fa-solid fa-trash"></i></td>
+                        </tr>
+                        <tr class="baixo-estoque">
+                            <td>Camiseta</td>
+                            <td>R$ 69,90</td>
+                            <td>2</td>
+                            <td>0001</td>
+                            <td><i class="fa-solid fa-pencil"></i></td>
+                            <td><i class="fa-solid fa-trash"></i></td>
+                        </tr>
+                        <tr class="sem-estoque">
+                            <td>Camiseta</td>
+                            <td>R$ 69,90</td>
+                            <td>0</td>
+                            <td>0001</td>
+                            <td><i class="fa-solid fa-pencil"></i></td>
+                            <td><i class="fa-solid fa-trash"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </body>
+</html>

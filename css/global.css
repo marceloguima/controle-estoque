@@ -12,7 +12,10 @@
     --sombra: 1px 1px 4px #5a5a5a7a;
     --azul: #3a6fbe;
     --laranja: #e46f2c;
-    --alerta: #e93f3fab;
+    --alerta: #f01d1dd3;
+    --alerta-estoque:#f5d5d5;
+        --alerta-sem-estoque:#fc6464;
+
 
 }
 
@@ -25,4 +28,19 @@ body{
 .container{
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.botao{     
+    background: var(--azul);
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
 }
